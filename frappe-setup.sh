@@ -1,4 +1,6 @@
 #!/bin/bash
+# versions
+NODE='18'
 
 # Define colors
 GREEN='\033[0;32m'
@@ -42,8 +44,8 @@ sudo service mysql restart
 # Step 4: Install Node.js, NPM, and Yarn
 echo -e "${YELLOW}Installing Node.js, NPM, and Yarn...${NC}"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-source ~/.bashrc
-nvm install node
+source ~/.profile
+nvm install $NODE
 sudo apt-get install -y npm
 sudo npm install -g yarn
 
